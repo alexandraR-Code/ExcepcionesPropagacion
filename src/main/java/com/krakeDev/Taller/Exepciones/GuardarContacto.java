@@ -10,7 +10,7 @@ public class GuardarContacto {
 
 	private static final Logger log = LogManager.getLogger(GuardarContacto.class);
 
-	public static void guardar() {
+	public static void guardar(String telefono) {
 
 		FileWriter escritor = null;
 
@@ -19,7 +19,7 @@ public class GuardarContacto {
 
 			escritor.write("Nombre: Maria \n");
 			escritor.write("Apellido: Gomez \n");
-			escritor.write("Telefono: 0981234567 \n");
+			escritor.write("Telefono: " + telefono + " \n");
 
 			log.info("Se guardo exitosamente");
 		} catch (IOException e) {

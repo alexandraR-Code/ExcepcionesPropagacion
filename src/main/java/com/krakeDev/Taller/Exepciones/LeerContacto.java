@@ -17,13 +17,15 @@ public class LeerContacto {
 		BufferedReader lector = null;
 
 		try {
-			lectorArchivo = new FileReader("contactos.txt"); 
-			
+			lectorArchivo = new FileReader("fantasma.txt");
+
 			lector = new BufferedReader(lectorArchivo);
-			
-			//readline lee linea por linea
-			System.out.println(lector.readLine());
-			
+
+			for (int i = 0; i < 6; i++) {
+				// readline lee linea por linea
+				System.out.println(lector.readLine());
+			}
+
 			log.info("Se pudo leer exitosamente");
 		} catch (FileNotFoundException e) {
 			log.error("Ocurrio un error al buscar el archivo: " + e);
