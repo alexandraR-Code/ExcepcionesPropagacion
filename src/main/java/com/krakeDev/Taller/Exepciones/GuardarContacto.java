@@ -26,8 +26,10 @@ public class GuardarContacto {
 			log.error("Ocurrio un error: " + e);
 		} finally {
 			try {
-				escritor.close();
-				log.info("Se cerro el escritor exitosamente");
+				if (escritor != null) {
+					escritor.close();
+					log.info("Se cerro el escritor exitosamente");
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
